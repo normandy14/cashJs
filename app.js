@@ -75,3 +75,28 @@ dimeTotalDown.addEventListener("click", function() {
   console.log(dimeTotal)
   dimeTotalLabel.innerHTML = dimeTotal;
 });
+
+// Quarter
+let quarterTotal = 0;
+console.log(quarterTotal)
+
+let quarterTotalLabel = document.getElementById("quarterTotalLabel");
+quarterTotalLabel.innerHTML = quarterTotal;
+
+let quarterTotalUp = document.getElementById("quarterTotalUp");
+let quarterTotalDown = document.getElementById("quarterTotalDown");
+
+quarterTotalUp.addEventListener("click", function() {
+  quarterTotal = (parseFloat(quarterTotal) + .25).toFixed(2);
+  console.log(quarterTotal);
+  quarterTotalLabel.innerHTML = quarterTotal;
+});
+
+quarterTotalDown.addEventListener("click", function() {
+  if (quarterTotal <= 0) {
+    return;
+  }
+  quarterTotal = (parseFloat(quarterTotal) - .25).toFixed(2);
+  console.log(quarterTotal)
+  quarterTotalLabel.innerHTML = quarterTotal;
+});
