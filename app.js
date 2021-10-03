@@ -50,3 +50,28 @@ nickelTotalDown.addEventListener("click", function() {
   console.log(nickelTotal)
   nickelTotalLabel.innerHTML = nickelTotal;
 });
+
+// Dime
+let dimeTotal = 0;
+console.log(dimeTotal)
+
+let dimeTotalLabel = document.getElementById("dimeTotalLabel");
+dimeTotalLabel.innerHTML = dimeTotal;
+
+let dimeTotalUp = document.getElementById("dimeTotalUp");
+let dimeTotalDown = document.getElementById("dimeTotalDown");
+
+dimeTotalUp.addEventListener("click", function() {
+  dimeTotal = (parseFloat(dimeTotal) + .10).toFixed(2);
+  console.log(dimeTotal);
+  dimeTotalLabel.innerHTML = dimeTotal;
+});
+
+dimeTotalDown.addEventListener("click", function() {
+  if (dimeTotal <= 0) {
+    return;
+  }
+  dimeTotal = (parseFloat(dimeTotal) - .10).toFixed(2);
+  console.log(dimeTotal)
+  dimeTotalLabel.innerHTML = dimeTotal;
+});
