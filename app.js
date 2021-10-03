@@ -1,6 +1,7 @@
 let itemTotal = document.getElementById("itemTotal").value;
 console.log(itemTotal);
 
+// Penny
 let pennyTotal = 0;
 console.log(pennyTotal)
 
@@ -23,4 +24,29 @@ pennyTotalDown.addEventListener("click", function() {
   pennyTotal = (parseFloat(pennyTotal) - .01).toFixed(2);
   console.log(pennyTotal)
   pennyTotalLabel.innerHTML = pennyTotal;
+});
+
+// Nickel
+let nickelTotal = 0;
+console.log(nickelTotal)
+
+let nickelTotalLabel = document.getElementById("nickelTotalLabel");
+nickelTotalLabel.innerHTML = nickelTotal;
+
+let nickelTotalUp = document.getElementById("nickelTotalUp");
+let nickelTotalDown = document.getElementById("nickelTotalDown");
+
+nickelTotalUp.addEventListener("click", function() {
+  nickelTotal = (parseFloat(nickelTotal) + .05).toFixed(2);
+  console.log(nickelTotal);
+  nickelTotalLabel.innerHTML = nickelTotal;
+});
+
+nickelTotalDown.addEventListener("click", function() {
+  if (nickelTotal <= 0) {
+    return;
+  }
+  nickelTotal = (parseFloat(nickelTotal) - .05).toFixed(2);
+  console.log(nickelTotal)
+  nickelTotalLabel.innerHTML = nickelTotal;
 });
