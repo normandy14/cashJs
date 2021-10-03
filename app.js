@@ -150,3 +150,78 @@ fiveDollarTotalDown.addEventListener("click", function() {
   console.log(fiveDollarTotal)
   fiveDollarTotalLabel.innerHTML = oneDollarTotal;
 });
+
+// Ten Dollar
+let tenDollarTotal = 0;
+console.log(tenDollarTotal)
+
+let tenDollarTotalLabel = document.getElementById("tenDollarTotalLabel");
+tenDollarTotalLabel.innerHTML = tenDollarTotal;
+
+let tenDollarTotalUp = document.getElementById("tenDollarTotalUp");
+let tenDollarTotalDown = document.getElementById("tenDollarTotalDown");
+
+tenDollarTotalUp.addEventListener("click", function() {
+  tenDollarTotal = (parseFloat(tenDollarTotal) + 10.00).toFixed(2);
+  console.log(tenDollarTotal);
+  tenDollarTotalLabel.innerHTML = tenDollarTotal;
+});
+
+tenDollarTotalDown.addEventListener("click", function() {
+  if (tenDollarTotal <= 0) {
+    return;
+  }
+  tenDollarTotal = (parseFloat(tenDollarTotal) - 10.00).toFixed(2);
+  console.log(tenDollarTotal)
+  tenDollarTotalLabel.innerHTML = tenDollarTotal;
+});
+
+// Twenty Dollar
+let twentyDollarTotal = 0;
+console.log(twentyDollarTotal)
+
+let twentyDollarTotalLabel = document.getElementById("twentyDollarTotalLabel");
+twentyDollarTotalLabel.innerHTML = twentyDollarTotal;
+
+let twentyDollarTotalUp = document.getElementById("twentyDollarTotalUp");
+let twentyDollarTotalDown = document.getElementById("twentyDollarTotalDown");
+
+twentyDollarTotalUp.addEventListener("click", function() {
+  twentyDollarTotal = (parseFloat(twentyDollarTotal) + 20.00).toFixed(2);
+  console.log(twentyDollarTotal);
+  twentyDollarTotalLabel.innerHTML = twentyDollarTotal;
+});
+
+twentyDollarTotalDown.addEventListener("click", function() {
+  if (twentyDollarTotal <= 0) {
+    return;
+  }
+  twentyDollarTotal = (parseFloat(twentyDollarTotal) - 20.00).toFixed(2);
+  console.log(twentyDollarTotal)
+  twentyDollarTotalLabel.innerHTML = twentyDollarTotal;
+});
+
+// One Hundred Dollar
+let oneHundredDollarTotal = 0;
+console.log(oneHundredDollarTotal)
+
+let oneHundredDollarTotalLabel = document.getElementById("oneHundredDollarTotalLabel");
+oneHundredDollarTotalLabel.innerHTML = oneHundredDollarTotal;
+
+let oneHundredDollarTotalUp = document.getElementById("oneHundredDollarTotalUp");
+let oneHundredDollarTotalDown = document.getElementById("oneHundredDollarTotalDown");
+
+oneHundredDollarTotalUp.addEventListener("click", function() {
+  oneHundredDollarTotal = (parseFloat(oneHundredDollarTotal) + 100.00).toFixed(2);
+  console.log(oneHundredDollarTotal);
+  oneHundredDollarTotalLabel.innerHTML = oneHundredDollarTotal;
+});
+
+oneHundredDollarTotalDown.addEventListener("click", function() {
+  if (oneHundredDollarTotal <= 0) {
+    return;
+  }
+  oneHundredDollarTotal = (parseFloat(oneHundredDollarTotal) - 100.00).toFixed(2);
+  console.log(oneHundredDollarTotal)
+  oneHundredDollarTotalLabel.innerHTML = oneHundredDollarTotal;
+});
