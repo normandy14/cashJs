@@ -100,3 +100,53 @@ quarterTotalDown.addEventListener("click", function() {
   console.log(quarterTotal)
   quarterTotalLabel.innerHTML = quarterTotal;
 });
+
+// OneDollar
+let oneDollarTotal = 0;
+console.log(oneDollarTotal)
+
+let oneDollarTotalLabel = document.getElementById("oneDollarTotalLabel");
+oneDollarTotalLabel.innerHTML = oneDollarTotal;
+
+let oneDollarTotalUp = document.getElementById("oneDollarTotalUp");
+let oneDollarTotalDown = document.getElementById("oneDollarTotalDown");
+
+oneDollarTotalUp.addEventListener("click", function() {
+  oneDollarTotal = (parseFloat(oneDollarTotal) + 1.00).toFixed(2);
+  console.log(oneDollarTotal);
+  oneDollarTotalLabel.innerHTML = oneDollarTotal;
+});
+
+oneDollarTotalDown.addEventListener("click", function() {
+  if (oneDollarTotal <= 0) {
+    return;
+  }
+  oneDollarTotal = (parseFloat(oneDollarTotal) - 1.00).toFixed(2);
+  console.log(oneDollarTotal)
+  oneDollarTotalLabel.innerHTML = oneDollarTotal;
+});
+
+// Five Dollar
+let fiveDollarTotal = 0;
+console.log(fiveDollarTotal)
+
+let fiveDollarTotalLabel = document.getElementById("fiveDollarTotalLabel");
+fiveDollarTotalLabel.innerHTML = fiveDollarTotal;
+
+let fiveDollarTotalUp = document.getElementById("fiveDollarTotalUp");
+let fiveDollarTotalDown = document.getElementById("fiveDollarTotalDown");
+
+fiveDollarTotalUp.addEventListener("click", function() {
+  fiveDollarTotal = (parseFloat(fiveDollarTotal) + 5.00).toFixed(2);
+  console.log(fiveDollarTotal);
+  fiveDollarTotalLabel.innerHTML = fiveDollarTotal;
+});
+
+fiveDollarTotalDown.addEventListener("click", function() {
+  if (fiveDollarTotal <= 0) {
+    return;
+  }
+  fiveDollarTotal = (parseFloat(fiveDollarTotal) - 5.00).toFixed(2);
+  console.log(fiveDollarTotal)
+  fiveDollarTotalLabel.innerHTML = oneDollarTotal;
+});
