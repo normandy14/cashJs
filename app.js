@@ -30,6 +30,7 @@ pennyTotalLabel.innerHTML = pennyTotal;
 let pennyTotalUp = document.getElementById("pennyTotalUp");
 let pennyTotalDown = document.getElementById("pennyTotalDown");
 
+// increment up
 pennyTotalUp.addEventListener("click", function() {
   pennyTotal = (parseFloat(pennyTotal) + .01).toFixed(2);
   console.log(pennyTotal);
@@ -39,6 +40,7 @@ pennyTotalUp.addEventListener("click", function() {
   cashRegisterTotal.innerHTML = cashRegisterTotalAmount;
 });
 
+// increment down
 pennyTotalDown.addEventListener("click", function() {
   if (pennyTotal <= 0) {
     return;
@@ -47,7 +49,7 @@ pennyTotalDown.addEventListener("click", function() {
   console.log(pennyTotal)
   pennyTotalLabel.innerHTML = pennyTotal;
   
-  cashRegisterTotalAmount = (parseFloat(cashRegisterTotalAmount) + .01).toFixed(2);
+  cashRegisterTotalAmount = (parseFloat(cashRegisterTotalAmount) - .01).toFixed(2);
   cashRegisterTotal.innerHTML = cashRegisterTotalAmount;
 });
 
@@ -61,6 +63,8 @@ nickelTotalLabel.innerHTML = nickelTotal;
 let nickelTotalUp = document.getElementById("nickelTotalUp");
 let nickelTotalDown = document.getElementById("nickelTotalDown");
 
+
+// increment up
 nickelTotalUp.addEventListener("click", function() {
   nickelTotal = (parseFloat(nickelTotal) + .05).toFixed(2);
   console.log(nickelTotal);
@@ -70,6 +74,7 @@ nickelTotalUp.addEventListener("click", function() {
   cashRegisterTotal.innerHTML = cashRegisterTotalAmount;
 });
 
+// increment down
 nickelTotalDown.addEventListener("click", function() {
   if (nickelTotal <= 0) {
     return;
@@ -78,7 +83,7 @@ nickelTotalDown.addEventListener("click", function() {
   console.log(nickelTotal)
   nickelTotalLabel.innerHTML = nickelTotal;
   
-  cashRegisterTotalAmount = (parseFloat(cashRegisterTotalAmount) + .05).toFixed(2);
+  cashRegisterTotalAmount = (parseFloat(cashRegisterTotalAmount) - .05).toFixed(2);
   cashRegisterTotal.innerHTML = cashRegisterTotalAmount;
 });
 
@@ -92,6 +97,7 @@ dimeTotalLabel.innerHTML = dimeTotal;
 let dimeTotalUp = document.getElementById("dimeTotalUp");
 let dimeTotalDown = document.getElementById("dimeTotalDown");
 
+// increment up
 dimeTotalUp.addEventListener("click", function() {
   dimeTotal = (parseFloat(dimeTotal) + .10).toFixed(2);
   console.log(dimeTotal);
@@ -101,6 +107,7 @@ dimeTotalUp.addEventListener("click", function() {
   cashRegisterTotal.innerHTML = cashRegisterTotalAmount;
 });
 
+// increment down
 dimeTotalDown.addEventListener("click", function() {
   if (dimeTotal <= 0) {
     return;
@@ -109,8 +116,7 @@ dimeTotalDown.addEventListener("click", function() {
   console.log(dimeTotal)
   dimeTotalLabel.innerHTML = dimeTotal;
   
-  console.log("dime: ")
-  cashRegisterTotalAmount = (parseFloat(cashRegisterTotalAmount) + .10).toFixed(2);
+  cashRegisterTotalAmount = (parseFloat(cashRegisterTotalAmount) - .10).toFixed(2);
   cashRegisterTotal.innerHTML = cashRegisterTotalAmount;
 });
 
@@ -124,12 +130,17 @@ quarterTotalLabel.innerHTML = quarterTotal;
 let quarterTotalUp = document.getElementById("quarterTotalUp");
 let quarterTotalDown = document.getElementById("quarterTotalDown");
 
+// increment up
 quarterTotalUp.addEventListener("click", function() {
   quarterTotal = (parseFloat(quarterTotal) + .25).toFixed(2);
   console.log(quarterTotal);
   quarterTotalLabel.innerHTML = quarterTotal;
+  
+  cashRegisterTotalAmount = (parseFloat(cashRegisterTotalAmount) + .25).toFixed(2);
+  cashRegisterTotal.innerHTML = cashRegisterTotalAmount;
 });
 
+// increment down
 quarterTotalDown.addEventListener("click", function() {
   if (quarterTotal <= 0) {
     return;
@@ -137,6 +148,9 @@ quarterTotalDown.addEventListener("click", function() {
   quarterTotal = (parseFloat(quarterTotal) - .25).toFixed(2);
   console.log(quarterTotal)
   quarterTotalLabel.innerHTML = quarterTotal;
+  
+  cashRegisterTotalAmount = (parseFloat(cashRegisterTotalAmount) - .25).toFixed(2);
+  cashRegisterTotal.innerHTML = cashRegisterTotalAmount;
 });
 
 // OneDollar
@@ -149,12 +163,17 @@ oneDollarTotalLabel.innerHTML = oneDollarTotal;
 let oneDollarTotalUp = document.getElementById("oneDollarTotalUp");
 let oneDollarTotalDown = document.getElementById("oneDollarTotalDown");
 
+// increment up
 oneDollarTotalUp.addEventListener("click", function() {
   oneDollarTotal = (parseFloat(oneDollarTotal) + 1.00).toFixed(2);
   console.log(oneDollarTotal);
   oneDollarTotalLabel.innerHTML = oneDollarTotal;
+  
+  cashRegisterTotalAmount = (parseFloat(cashRegisterTotalAmount) + 1.00).toFixed(2);
+  cashRegisterTotal.innerHTML = cashRegisterTotalAmount;
 });
 
+// increment down
 oneDollarTotalDown.addEventListener("click", function() {
   if (oneDollarTotal <= 0) {
     return;
@@ -162,6 +181,9 @@ oneDollarTotalDown.addEventListener("click", function() {
   oneDollarTotal = (parseFloat(oneDollarTotal) - 1.00).toFixed(2);
   console.log(oneDollarTotal)
   oneDollarTotalLabel.innerHTML = oneDollarTotal;
+  
+  cashRegisterTotalAmount = (parseFloat(cashRegisterTotalAmount) - 1.00).toFixed(2);
+  cashRegisterTotal.innerHTML = cashRegisterTotalAmount;
 });
 
 // Five Dollar
@@ -174,12 +196,17 @@ fiveDollarTotalLabel.innerHTML = fiveDollarTotal;
 let fiveDollarTotalUp = document.getElementById("fiveDollarTotalUp");
 let fiveDollarTotalDown = document.getElementById("fiveDollarTotalDown");
 
+// increment up
 fiveDollarTotalUp.addEventListener("click", function() {
   fiveDollarTotal = (parseFloat(fiveDollarTotal) + 5.00).toFixed(2);
   console.log(fiveDollarTotal);
   fiveDollarTotalLabel.innerHTML = fiveDollarTotal;
+  
+  cashRegisterTotalAmount = (parseFloat(cashRegisterTotalAmount) + 5.00).toFixed(2);
+  cashRegisterTotal.innerHTML = cashRegisterTotalAmount;
 });
 
+// increment down
 fiveDollarTotalDown.addEventListener("click", function() {
   if (fiveDollarTotal <= 0) {
     return;
@@ -187,6 +214,9 @@ fiveDollarTotalDown.addEventListener("click", function() {
   fiveDollarTotal = (parseFloat(fiveDollarTotal) - 5.00).toFixed(2);
   console.log(fiveDollarTotal)
   fiveDollarTotalLabel.innerHTML = oneDollarTotal;
+  
+  cashRegisterTotalAmount = (parseFloat(cashRegisterTotalAmount) - 5.00).toFixed(2);
+  cashRegisterTotal.innerHTML = cashRegisterTotalAmount;
 });
 
 // Ten Dollar
