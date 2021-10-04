@@ -229,12 +229,17 @@ tenDollarTotalLabel.innerHTML = tenDollarTotal;
 let tenDollarTotalUp = document.getElementById("tenDollarTotalUp");
 let tenDollarTotalDown = document.getElementById("tenDollarTotalDown");
 
+// increment up
 tenDollarTotalUp.addEventListener("click", function() {
   tenDollarTotal = (parseFloat(tenDollarTotal) + 10.00).toFixed(2);
   console.log(tenDollarTotal);
   tenDollarTotalLabel.innerHTML = tenDollarTotal;
+  
+  cashRegisterTotalAmount = (parseFloat(cashRegisterTotalAmount) + 10.00).toFixed(2);
+  cashRegisterTotal.innerHTML = cashRegisterTotalAmount;
 });
 
+// increment down
 tenDollarTotalDown.addEventListener("click", function() {
   if (tenDollarTotal <= 0) {
     return;
@@ -242,6 +247,9 @@ tenDollarTotalDown.addEventListener("click", function() {
   tenDollarTotal = (parseFloat(tenDollarTotal) - 10.00).toFixed(2);
   console.log(tenDollarTotal)
   tenDollarTotalLabel.innerHTML = tenDollarTotal;
+  
+  cashRegisterTotalAmount = (parseFloat(cashRegisterTotalAmount) - 10.00).toFixed(2);
+  cashRegisterTotal.innerHTML = cashRegisterTotalAmount;
 });
 
 // Twenty Dollar
@@ -254,12 +262,17 @@ twentyDollarTotalLabel.innerHTML = twentyDollarTotal;
 let twentyDollarTotalUp = document.getElementById("twentyDollarTotalUp");
 let twentyDollarTotalDown = document.getElementById("twentyDollarTotalDown");
 
+// increment up
 twentyDollarTotalUp.addEventListener("click", function() {
   twentyDollarTotal = (parseFloat(twentyDollarTotal) + 20.00).toFixed(2);
   console.log(twentyDollarTotal);
   twentyDollarTotalLabel.innerHTML = twentyDollarTotal;
+  
+  cashRegisterTotalAmount = (parseFloat(cashRegisterTotalAmount) + 20.00).toFixed(2);
+  cashRegisterTotal.innerHTML = cashRegisterTotalAmount;
 });
 
+// increment down
 twentyDollarTotalDown.addEventListener("click", function() {
   if (twentyDollarTotal <= 0) {
     return;
@@ -267,6 +280,9 @@ twentyDollarTotalDown.addEventListener("click", function() {
   twentyDollarTotal = (parseFloat(twentyDollarTotal) - 20.00).toFixed(2);
   console.log(twentyDollarTotal)
   twentyDollarTotalLabel.innerHTML = twentyDollarTotal;
+  
+  cashRegisterTotalAmount = (parseFloat(cashRegisterTotalAmount) - 20.00).toFixed(2);
+  cashRegisterTotal.innerHTML = cashRegisterTotalAmount;
 });
 
 // One Hundred Dollar
@@ -279,12 +295,17 @@ oneHundredDollarTotalLabel.innerHTML = oneHundredDollarTotal;
 let oneHundredDollarTotalUp = document.getElementById("oneHundredDollarTotalUp");
 let oneHundredDollarTotalDown = document.getElementById("oneHundredDollarTotalDown");
 
+// increment up
 oneHundredDollarTotalUp.addEventListener("click", function() {
   oneHundredDollarTotal = (parseFloat(oneHundredDollarTotal) + 100.00).toFixed(2);
   console.log(oneHundredDollarTotal);
   oneHundredDollarTotalLabel.innerHTML = oneHundredDollarTotal;
+  
+  cashRegisterTotalAmount = (parseFloat(cashRegisterTotalAmount) + 100.00).toFixed(2);
+  cashRegisterTotal.innerHTML = cashRegisterTotalAmount;
 });
 
+// increment down
 oneHundredDollarTotalDown.addEventListener("click", function() {
   if (oneHundredDollarTotal <= 0) {
     return;
@@ -292,6 +313,9 @@ oneHundredDollarTotalDown.addEventListener("click", function() {
   oneHundredDollarTotal = (parseFloat(oneHundredDollarTotal) - 100.00).toFixed(2);
   console.log(oneHundredDollarTotal)
   oneHundredDollarTotalLabel.innerHTML = oneHundredDollarTotal;
+  
+  cashRegisterTotalAmount = (parseFloat(cashRegisterTotalAmount) - 100.00).toFixed(2);
+  cashRegisterTotal.innerHTML = cashRegisterTotalAmount;
 });
 
 // Outside of currency
