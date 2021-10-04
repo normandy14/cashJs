@@ -437,9 +437,17 @@ checkInsufficentFunds1 = (cashRemainder) => {
   return false;
 }
 
+checkNegativeBalance = (cashDiff) => {
+   if (cashDiff < 0) {
+     return true;
+  }
+  return false;
+}
+
 checkCashRegister = (price, cash, cid) => {
   let cashReturn = []; // this arr to be returned after operations
-  const cashDiff = cash - price; // the amount of change due
+  let cashDiff = parseFloat(cash - price).toFixed(2); // the amount of change due
+  console.log(cashDiff)
   
   let cashRemainder = cashDiff; // we will manipulate this mutable var; we leave cashDiff as an immutable var
   console.log("cash: " + cash)
@@ -458,6 +466,9 @@ checkCashRegister = (price, cash, cid) => {
   }
   else if (checkInsufficentFunds1(cashRemainder) === true) { // see function documentation
     return {'status' : 'INSUFFICIENT_FUNDS', 'change' :  []}
+  }
+  else if(checkNegativeBalance(cashDiff) ===true) {
+     return {'status' : 'NEGATIVE_BALANCE', 'change' :  []}
   }
  
   // divisible by hundred's bill
@@ -585,7 +596,7 @@ checkCashRegister = (price, cash, cid) => {
     if (pennRecord[1] !== 0) {
       cashReturn.push(pennRecord)
     }
-    cashRemainder = parseFloat(cashRemainder - (.01 * numPen)).toFixed(2)
+    cashRemainder = parseFloat(cashRemainder - (.01 * numPenn)).toFixed(2)
   }
   // * calc new cashRemainder ie. cashRemainder % 100
 
@@ -595,7 +606,7 @@ checkCashRegister = (price, cash, cid) => {
   for (let cash of cashReturn) {
     totalInCashReturn += cash[1]; // incr by the cash amount for each bill/coin
   }
-
+  // cashDiff = parseFloat(cashDiff).toFixed(2)
   totalInCashReturn = parseFloat(totalInCashReturn).toFixed(2); // format, currency has 2 decimal places
   if (cashDiff % totalInCashReturn !== 0 ){ // check for exact change
     return {'status' : 'INSUFFICIENT_FUNDS', 'change' :  []} // not exact change
