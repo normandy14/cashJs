@@ -1,8 +1,27 @@
 let itemTotal = document.getElementById("itemTotal").value;
 console.log(itemTotal);
 
+var cashRegisterTotal = document.getElementById("cashRegisterTotal");
+cashRegisterTotal.innerHTML = 0;
+
+
+//Currency
+
+var pennyTotal = 0;
+var nickelTotal = 0;
+var dimeTotal = 0;
+var quarterTotal = 0;
+var oneDollarTotal = 0;
+let fiveDollarTotal = 0;
+let tenDollarTotal = 0;
+let twentyDollarTotal = 0;
+let oneHundredDollarTotal = 0;
+
+let cashRegisterTotalAmount = 0;
+console.log("cashRegisterTotalAmount: " + cashRegisterTotalAmount);
+
+
 // Penny
-let pennyTotal = 0;
 console.log(pennyTotal)
 
 let pennyTotalLabel = document.getElementById("pennyTotalLabel");
@@ -15,6 +34,9 @@ pennyTotalUp.addEventListener("click", function() {
   pennyTotal = (parseFloat(pennyTotal) + .01).toFixed(2);
   console.log(pennyTotal);
   pennyTotalLabel.innerHTML = pennyTotal;
+  
+  cashRegisterTotalAmount = (parseFloat(cashRegisterTotalAmount) + .01).toFixed(2);
+  cashRegisterTotal.innerHTML = cashRegisterTotalAmount;
 });
 
 pennyTotalDown.addEventListener("click", function() {
@@ -24,10 +46,13 @@ pennyTotalDown.addEventListener("click", function() {
   pennyTotal = (parseFloat(pennyTotal) - .01).toFixed(2);
   console.log(pennyTotal)
   pennyTotalLabel.innerHTML = pennyTotal;
+  
+  cashRegisterTotalAmount = (parseFloat(cashRegisterTotalAmount) + .01).toFixed(2);
+  cashRegisterTotal.innerHTML = cashRegisterTotalAmount;
 });
 
 // Nickel
-let nickelTotal = 0;
+nickelTotal = 0;
 console.log(nickelTotal)
 
 let nickelTotalLabel = document.getElementById("nickelTotalLabel");
@@ -40,6 +65,9 @@ nickelTotalUp.addEventListener("click", function() {
   nickelTotal = (parseFloat(nickelTotal) + .05).toFixed(2);
   console.log(nickelTotal);
   nickelTotalLabel.innerHTML = nickelTotal;
+  
+  cashRegisterTotalAmount = (parseFloat(cashRegisterTotalAmount) + .05).toFixed(2);
+  cashRegisterTotal.innerHTML = cashRegisterTotalAmount;
 });
 
 nickelTotalDown.addEventListener("click", function() {
@@ -49,10 +77,13 @@ nickelTotalDown.addEventListener("click", function() {
   nickelTotal = (parseFloat(nickelTotal) - .05).toFixed(2);
   console.log(nickelTotal)
   nickelTotalLabel.innerHTML = nickelTotal;
+  
+  cashRegisterTotalAmount = (parseFloat(cashRegisterTotalAmount) + .05).toFixed(2);
+  cashRegisterTotal.innerHTML = cashRegisterTotalAmount;
 });
 
 // Dime
-let dimeTotal = 0;
+dimeTotal = 0;
 console.log(dimeTotal)
 
 let dimeTotalLabel = document.getElementById("dimeTotalLabel");
@@ -65,6 +96,9 @@ dimeTotalUp.addEventListener("click", function() {
   dimeTotal = (parseFloat(dimeTotal) + .10).toFixed(2);
   console.log(dimeTotal);
   dimeTotalLabel.innerHTML = dimeTotal;
+  
+  cashRegisterTotalAmount = (parseFloat(cashRegisterTotalAmount) + .10).toFixed(2);
+  cashRegisterTotal.innerHTML = cashRegisterTotalAmount;
 });
 
 dimeTotalDown.addEventListener("click", function() {
@@ -74,10 +108,14 @@ dimeTotalDown.addEventListener("click", function() {
   dimeTotal = (parseFloat(dimeTotal) - .10).toFixed(2);
   console.log(dimeTotal)
   dimeTotalLabel.innerHTML = dimeTotal;
+  
+  console.log("dime: ")
+  cashRegisterTotalAmount = (parseFloat(cashRegisterTotalAmount) + .10).toFixed(2);
+  cashRegisterTotal.innerHTML = cashRegisterTotalAmount;
 });
 
 // Quarter
-let quarterTotal = 0;
+quarterTotal = 0;
 console.log(quarterTotal)
 
 let quarterTotalLabel = document.getElementById("quarterTotalLabel");
@@ -102,7 +140,7 @@ quarterTotalDown.addEventListener("click", function() {
 });
 
 // OneDollar
-let oneDollarTotal = 0;
+oneDollarTotal = 0;
 console.log(oneDollarTotal)
 
 let oneDollarTotalLabel = document.getElementById("oneDollarTotalLabel");
@@ -127,7 +165,7 @@ oneDollarTotalDown.addEventListener("click", function() {
 });
 
 // Five Dollar
-let fiveDollarTotal = 0;
+fiveDollarTotal = 0;
 console.log(fiveDollarTotal)
 
 let fiveDollarTotalLabel = document.getElementById("fiveDollarTotalLabel");
@@ -152,7 +190,7 @@ fiveDollarTotalDown.addEventListener("click", function() {
 });
 
 // Ten Dollar
-let tenDollarTotal = 0;
+tenDollarTotal = 0;
 console.log(tenDollarTotal)
 
 let tenDollarTotalLabel = document.getElementById("tenDollarTotalLabel");
@@ -177,7 +215,7 @@ tenDollarTotalDown.addEventListener("click", function() {
 });
 
 // Twenty Dollar
-let twentyDollarTotal = 0;
+twentyDollarTotal = 0;
 console.log(twentyDollarTotal)
 
 let twentyDollarTotalLabel = document.getElementById("twentyDollarTotalLabel");
@@ -202,7 +240,7 @@ twentyDollarTotalDown.addEventListener("click", function() {
 });
 
 // One Hundred Dollar
-let oneHundredDollarTotal = 0;
+oneHundredDollarTotal = 0;
 console.log(oneHundredDollarTotal)
 
 let oneHundredDollarTotalLabel = document.getElementById("oneHundredDollarTotalLabel");
@@ -225,3 +263,5 @@ oneHundredDollarTotalDown.addEventListener("click", function() {
   console.log(oneHundredDollarTotal)
   oneHundredDollarTotalLabel.innerHTML = oneHundredDollarTotal;
 });
+
+// Outside of currency
