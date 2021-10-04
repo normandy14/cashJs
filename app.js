@@ -1,14 +1,23 @@
+// price of items
 let priceTotal = document.getElementById("priceTotal").value;
 console.log("priceTotal: ");
 console.log(priceTotal);
 
+// the bills and coins the user gives to cashier clerk
 let cashGivenTotal = document.getElementById("cashGivenTotal").value;
 console.log("cashGivenTotal: ");
 console.log(cashGivenTotal);
 
+let submitToRegister = document.getElementById("submitToRegister");
+submitToRegister.addEventListener("click", function() {
+  console.log("Hello World 2!");
+});
+
+// the total of the increment/ decrement of the bills and coins in the register
 var cashRegisterTotal = document.getElementById("cashRegisterTotal");
 cashRegisterTotal.innerHTML = 0;
 
+// the output of the final function; it gives status of change transaction
 var cashReturn = document.getElementById("cashReturn");
 cashReturn.innerHTML = "None";
 
