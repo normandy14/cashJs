@@ -8,6 +8,9 @@ The algorithm remains the same as the original, except a few modifications for c
 This app can simply be downloaded or clones, then simply open the index.html file.
 The app is perfectly usable.
 
+## App Preview
+A  view of the app 
+
 ![App](https://github.com/normandy14/cashJs/blob/main/cashJsScreenshot.png)
 
 ## Authors
