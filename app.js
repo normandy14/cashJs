@@ -4,6 +4,9 @@ console.log(itemTotal);
 var cashRegisterTotal = document.getElementById("cashRegisterTotal");
 cashRegisterTotal.innerHTML = 0;
 
+var cashReturn = document.getElementById("cashReturn");
+cashReturn.innerHTML = "None";
+
 
 //Currency
 
