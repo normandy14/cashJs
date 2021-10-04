@@ -383,9 +383,25 @@ submitToRegister.addEventListener("click", function() {
   cashGivenTotal = document.getElementById("cashGivenTotal").value;
   console.log("cashGivenTotal: ");
   
-  console.log(
-    checkCashRegister(parseFloat(priceTotal).toFixed(2), parseFloat(cashGivenTotal).toFixed(2), recordArray)
-  );
+  let output = checkCashRegister(parseFloat(priceTotal).toFixed(2), parseFloat(cashGivenTotal).toFixed(2), recordArray);
+  console.log(output)
+  if (output["change"].length > 0) {
+    let s = "";
+    for (change of output["change"]) {
+      console.log("change " + change[0])
+      console.log(typeof change[0])
+      console.log("change " + change[1])
+      console.log(typeof change[1])
+      if (change[1] !== '0.00') {
+        s += change[0].slice(0, 1).toUpperCase() + change[0].slice(1, change[0].length).toLowerCase() + " " + (parseFloat(change[1])).toFixed(2) + " ";
+      }
+    }
+    cashReturn.innerHTML = "Status: " + output["status"] + "\n Change: " + s;
+  }
+  else {
+    cashReturn.innerHTML = "Status: " + output["status"];
+  }
+  
   
   
 });
