@@ -8,10 +8,6 @@ let cashGivenTotal = document.getElementById("cashGivenTotal").value;
 console.log("cashGivenTotal: ");
 console.log(cashGivenTotal);
 
-let submitToRegister = document.getElementById("submitToRegister");
-submitToRegister.addEventListener("click", function() {
-  console.log("Hello World 2!");
-});
 
 // the total of the increment/ decrement of the bills and coins in the register
 var cashRegisterTotal = document.getElementById("cashRegisterTotal");
@@ -335,4 +331,35 @@ oneHundredDollarTotalDown.addEventListener("click", function() {
   cashRegisterTotal.innerHTML = cashRegisterTotalAmount;
 });
 
-// Outside of currency
+// Prepare for copy and paste function. Prepare for copy and paste function. Prepare for copy and paste function. Prepare for copy and paste function. Prepare for copy and paste function.
+
+
+let submitToRegister = document.getElementById("submitToRegister");
+
+submitToRegister.addEventListener("click", function() {
+  console.log("Hello World 2!");
+  
+  let pennyRecord = ['PENNY', pennyTotal];
+  let nickelRecord = ['NICKEL', nickelTotal];
+  let dimeRecord = ['DIME', dimeTotal];
+  let quarterRecord = ['QUARTER', quarterTotal];
+  let oneRecord = ['ONE', oneDollarTotal];
+  let fiveRecord = ['FIVE', fiveDollarTotal];
+  let tenRecord = ['TEN', tenDollarTotal];
+  let twentyRecord = ['TWENTY', twentyDollarTotal];
+  let oneHundredRecord = ['ONE HUNDRED', oneHundredDollarTotal] // Recorded as 'ONE HUNDRED'
+  
+  console.log(pennyRecord);
+  console.log(nickelRecord);
+  console.log(dimeRecord);
+  console.log(quarterRecord);
+  console.log(oneRecord);
+  console.log(fiveRecord);
+  console.log(tenRecord);
+  console.log(twentyRecord);
+  console.log(oneHundredRecord);
+  
+});
+
+/* COPY AND PASTE FUNCTION COPY AND PAST FUNCTION COPY AND PASTE FUNCTION COPY AND PASTE FUNCTION COPY AND PAST FUNCTION COPY AND PASTE FUNCTION COPY AND PASTE FUNCTION COPY AND PAST FUNCTION COPY AND PASTE FUNCTION COPY AND PASTE FUNCTION COPY AND PAST FUNCTION COPY AND PASTE FUNCTION COPY AND PASTE FUNCTION COPY AND PAST FUNCTION COPY AND PASTE FUNCTION COPY AND PASTE FUNCTION COPY AND PAST FUNCTION COPY AND PASTE FUNCTION COPY AND PASTE FUNCTION COPY AND PAST FUNCTION COPY AND PASTE FUNCTION COPY AND PASTE FUNCTION COPY AND PAST FUNCTION COPY AND PASTE FUNCTION COPY AND PASTE FUNCTION COPY AND PAST FUNCTION COPY AND PASTE FUNCTION COPY AND PASTE FUNCTION COPY AND PAST FUNCTION COPY AND PASTE FUNCTION */
+
