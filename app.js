@@ -1,5 +1,10 @@
-let itemTotal = document.getElementById("itemTotal").value;
-console.log(itemTotal);
+let priceTotal = document.getElementById("priceTotal").value;
+console.log("priceTotal: ");
+console.log(priceTotal);
+
+let cashGivenTotal = document.getElementById("cashGivenTotal").value;
+console.log("cashGivenTotal: ");
+console.log(cashGivenTotal);
 
 var cashRegisterTotal = document.getElementById("cashRegisterTotal");
 cashRegisterTotal.innerHTML = 0;
