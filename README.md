@@ -9,11 +9,6 @@ The algorithm remains the same as the original, except a few modifications for c
 
 This app can simply be downloaded or cloned. Then simply open the index.html file in a browser.
 
-## App Preview
-A  view of the app 
-
-![App](https://github.com/normandy14/cashJs/blob/main/cashJsScreenshot.png)
-
 ## Challenge Description
 
 Design a cash register drawer function checkCashRegister() that accepts purchase price as the first argument (price), payment as the second argument (cash), and cash-in-drawer (cid) as the third argument.
@@ -28,6 +23,9 @@ Return {status: "CLOSED", change: [...]} with cash-in-drawer as the value for th
 
 Otherwise, return {status: "OPEN", change: [...]}, with the change due in coins and bills, sorted in highest to lowest order, as the value of the change key.
 
+## App Preview
+
+![App](https://github.com/normandy14/cashJs/blob/main/cashJsScreenshot.png)
 
 ## Authors
 
