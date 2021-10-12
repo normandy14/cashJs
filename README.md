@@ -2,7 +2,7 @@
 
 ## Purpose and Motivation
 
-This app builds on the success of the previous Github projet, [cashRegister](https://github.com/normandy14/cashRegister) project.
+This app builds on the success of the previous Github project, [cashRegister](https://github.com/normandy14/cashRegister) project.
 The algorithm remains the same as the original, except a few modifications for converting string information from the DOM back into the number type or javaScript.
 
 ## Getting Started
